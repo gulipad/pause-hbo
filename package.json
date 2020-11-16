@@ -1,0 +1,41 @@
+{
+  "name": "hbo-tweak",
+  "version": "1.0.0",
+  "description": "A Chrome Extension to make HBO a teeny bit nicer",
+  "author": "ignaciomorenopubul@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack --hide-modules",
+    "build:dev": "cross-env NODE_ENV=development webpack --hide-modules",
+    "build-zip": "node scripts/build-zip.js",
+    "watch": "npm run build -- --watch",
+    "watch:dev": "cross-env HMR=true npm run build:dev -- --watch"
+  },
+  "dependencies": {
+    "vue": "^2.6.11",
+    "webextension-polyfill": "^0.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/runtime-corejs3": "^7.8.3",
+    "archiver": "^3.1.1",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "core-js": "^3.6.4",
+    "cross-env": "^5.2.1",
+    "css-loader": "^3.4.2",
+    "ejs": "^2.7.4",
+    "file-loader": "^1.1.11",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.13.1",
+    "sass-loader": "^7.3.1",
+    "vue-loader": "^15.8.3",
+    "vue-template-compiler": "^2.6.11",
+    "web-ext-types": "^2.1.0",
+    "webpack": "^4.41.5",
+    "webpack-chrome-extension-reloader": "^0.8.3",
+    "webpack-cli": "^3.3.10"
+  }
+}

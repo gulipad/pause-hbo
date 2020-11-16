@@ -1,0 +1,37 @@
+{
+  "name": "Pause HBO",
+  "description": "A Chrome Extension to make HBO a teeny bit nicer. Pause and play with spacebar, and without exiting full-screen. For US, Spain.",
+  "version": null,
+  "manifest_version": 2,
+  "icons": {
+    "48": "icons/icon_48.png",
+    "128": "icons/icon_128.png"
+  },
+  "page_action": {
+    "default_icon": {  
+      "48": "icons/icon_48.png",
+      "128": "icons/icon_128.png"
+    },
+    "default_title": "HBO Tweak"
+  },
+  "permissions": [
+    "*://es.hboespana.com/*",
+    "*://*.hbo.com/*",
+    "*://*.hbogo.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://es.hboespana.com/*",
+        "*://*.hbo.com/*",
+        "*://*.hbogo.com/*"
+    ],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  }
+}
